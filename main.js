@@ -2,8 +2,8 @@ require('dotenv').config();
 
 const app = require('./app/server')
 
-app.listen(8080, () => {
-    console.log('Server is running')
-})
+const port =  process.env.PORT || 8080
 
-// nodemon index.js --ignore db.json
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`)
+})
